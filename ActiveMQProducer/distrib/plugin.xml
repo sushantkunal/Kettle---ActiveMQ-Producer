@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="ActiveMQProducer"
+   iconfile="queue.png"
+   description="ActiveMQ Producer"
+   tooltip="This is a ActiveMQ Producer step"
+   category="Transform"
+   classname="com.fico.kettle.queue.ActiveMQProducerMeta">
+   <libraries>
+    <library name="activemq-producer.jar"/>
+    </libraries>
+    
+   <localized_category>
+     <category locale="en_US">Transform</category>
+     <category locale="nl_NL">Transform</category>
+     <category locale="fr_FR">Transformation</category>
+   </localized_category>
+   <localized_description>
+     <description locale="en_US">ActiveMQ Producer</description>
+     <description locale="nl_NL">Plugin voorbeeld</description>
+     <description locale="fr_FR">Queue de plugin</description>
+   </localized_description>
+   <localized_tooltip>
+     <tooltip locale="en_US">This is a queue plugin step</tooltip>
+     <tooltip locale="fr_FR">Il s'agit d'une étape de plugin de file d'attente</tooltip>
+   </localized_tooltip>
+   
+</plugin>
