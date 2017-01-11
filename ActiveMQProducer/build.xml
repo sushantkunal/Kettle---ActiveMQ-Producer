@@ -1,7 +1,7 @@
-<project name="ActiveMQKettle" default="default" basedir=".">
+<project name="ActiveMQProducerKettle" default="default" basedir=".">
 
 	  <description>
-	      Build file for activeMQ plugin for kettle
+	      Build file for activeMQ producer plugin for kettle
 	    </description>
 
 	  <tstamp prefix="start"/>
@@ -17,7 +17,7 @@
 	  <property name="distrib"        		location="distrib"/>
 	  <property name="libext"     			location="libext"/>
 	  <property name="libswt"     			location="libswt"/>
-	  <property name="deploydir"     		location="C:\KETTLE\data-integration\plugins\steps\queue"/>
+	  <property name="deploydir"     		location="deploy"/>
 	
 	  <target name="init" description="create timestamp and directories">
     	<echo>Init...</echo>
@@ -35,7 +35,7 @@
 	  -->
 
 	  <target name="compile" depends="init" description="compile the source " >
-	  	<echo>Compiling Dummy Plugin...</echo>
+	  	<echo>Compiling AtiveMQ Producer Plugin...</echo>
 	    <javac srcdir="${src}" 
 	    	   destdir="${classes}">
 
@@ -67,8 +67,8 @@
 	       ==========================
 	  -->
 		
-	  <target name="queue" depends="compile, copy" description="generate the Queue Plugin library activemq-producer.jar">
-	  	<echo>Generating the Kettle library queue.jar ...</echo>
+	  <target name="queue" depends="compile, copy" description="generate the Producer library activemq-producer.jar">
+	  	<echo>Generating the Kettle library activemq-producer.jar ...</echo>
 	  	<jar 
 	    	jarfile="${lib}/activemq-producer.jar" 
 	    	basedir="${classes}" 
